@@ -3,9 +3,21 @@ from Utlis.init_google_cloud import set_gcloud_project
 
 from Probe.probing import Probing
 
+import time
+
 if __name__ == '__main__':
     set_gcloud_project()
     instance = load_instances()
 
     Probe = Probing(instance)
+    
+    while True:
+        data = Probe.ping_instance()
+
+        Probe.logging(data, 'ping_instance_logs')
+        Probe.monitoring(data['jitter'], 'ping-instance-monitoring', 'Pittsburgh')
+
+        time.sleep(10)
+    
+
     

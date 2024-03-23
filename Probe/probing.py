@@ -13,6 +13,13 @@ class Probing():
         
         self.enable_logging = enable_logging
         self.enable_monitoring = enable_monitoring
+
+    
+    def logging(self, data, log_name):
+        self.LoggingClient.send_logs(data, log_name)
+
+    def monitoring(self, value, metric_type_name, metric_store_id):
+        self.MonitoringClient.write_time_series(value, metric_type_name, metric_store_id)
     
     def ping_instance(self, metric_type_name = 'example', metric_store_id = 'Pittsburgh', **kwargs):
         ping_raw = ping(address = self.ip_address, **kwargs)
@@ -25,5 +32,7 @@ class Probing():
                 'jitter'        :         ping_raw.jitter,
                 'is_alive'      :         ping_raw.is_alive}
 
-        if self.enable_logging == True: self.LoggingClient.send_logs(data)
-        if self.enable_monitoring == True: self.MonitoringClient.write_time_series()
+
+        return data
+
+        
