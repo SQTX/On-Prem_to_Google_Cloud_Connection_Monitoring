@@ -1,0 +1,9 @@
+
+{
+"4196128101522925613" : "instance_id",
+"metric": {
+    "type": "custom.googleapis.com/{name}",
+    "labels": {
+      "store_id": "Pittsburgh"
+    }
+}
