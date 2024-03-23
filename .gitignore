@@ -74,3 +74,7 @@ Temporary Items
 # Built Visual Studio Code Extensions
 *.vsix
 
+/Utlis/__pycache__
+/Data/__pycache__
+/GoogleAPI/__pycache__
+/Probe/__pycache__
