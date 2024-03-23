@@ -1,7 +1,7 @@
 from google.cloud import logging
 class Logging:
     
-    def __init__(self) -> None:
+    def __init__(self):
         self.logging_client = logging.Client()
 
     def send_logs(self, data, log_name):
