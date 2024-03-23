@@ -5,5 +5,7 @@ from Probe.probing import Probing
 
 if __name__ == '__main__':
     set_gcloud_project()
-    instances = load_instances()
+    instance = load_instances()
+
+    Probe = Probing(instance)
     

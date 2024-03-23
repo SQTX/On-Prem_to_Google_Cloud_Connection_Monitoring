@@ -1,15 +1,13 @@
 
 {   
     "ip_address" : "34.118.37.108",
-      "resource": {
+    "resource": {
         "type": "gce_instance",
         "labels": {
-          "instance_id": "4196128101522925613",
-          "zone": "europe-central2-a"
+        "instance_id": "4196128101522925613",
+        "zone": "europe-central2-a"
         }
-      }
     }
-
 }
   
 

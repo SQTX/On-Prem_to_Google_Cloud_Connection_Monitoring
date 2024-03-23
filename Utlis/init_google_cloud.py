@@ -1,6 +1,7 @@
 import os
 
-PROJECT_ID = 'przemeksroka-joonix-log-test'
+from Data.settings import PROJECT_ID
+
 ENVIRONMENT = 'GCLOUD_PROJECT'
 
 def set_gcloud_project():
