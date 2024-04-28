@@ -7,6 +7,8 @@ class Logging:
     def send_logs(self, data, log_name):
 
         logger = self.logging_client.logger(log_name)
-        
-        logger.log_struct(data)
+
+        try: logger.log_struct(data)
+
+        except: print('Cannot write log structure.')
 
