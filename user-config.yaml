@@ -1,0 +1,41 @@
+# Welcome to the Google Cloud Agent configuration file.
+# To enable the agent to function properly, it is necessary to fill in several pieces of information below.
+# With these, the application will be able to both connect to the cloud service and control its operation.
+
+# Basic information about your Google Cloud Project:
+main:
+  # Provide the full ID of your Google Cloud project  [e.g., 192.168.10.1]
+  #  project-id: "YOUR-PROJECT-ID"
+  project-id: "przemeksroka-joonix-log-test"
+#  environment: "GCLOUD_PROJECT"  # TODO
+
+# Information will be included in the packets sent by the Agent and recorded in the application logs.
+log-info:
+  # Provide the log name:
+  #  log-name: "YOUR-LOG-NAME"
+  log-name: "bartek-logs-dead"
+  # Provide the monitoring name:
+  #  monitoring-name: "YOUR-MONITORING-NAME"
+  monitoring-name: "bartek-monitoring-dead"
+
+addresses:
+  # (For IPv4)
+  # Provide the IPv4 address of the host (workstation/server)  [e.g., 192.168.10.53]
+  #  host-ipv4-address: "X.X.X.X"
+  host-ipv4-address: ""
+  # Provide the IPv4 address of the local network router [e.g., 192.168.10.1]
+  #  lan-router-ipv4-address: "X.X.X.X"
+  lan-router-ipv4-address: "192.168.0.1"
+  # Provide the IPv4 address of your ISP [e.g., 130.5.5.25]
+  #  isp-ipv4-address: "X.X.X.X"
+  isp-ipv4-address: "127.0.0.1"
+  # Provide the IPv4 address of the chosen DNS server [e.g., GoogleDNS = 8.8.8.8]
+  #  dns-ipv4-address: "X.X.X.X"
+  dns-ipv4-address: "8.8.8.8"
+
+  # (For IPv6)
+  # Soon...
+
+project-admin-data:
+# Provide the email address to which information will be sent in case the agent detects connection issues
+#  admin-mail-address: "mail@domain.com"
