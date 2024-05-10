@@ -1,5 +1,5 @@
 import os
-from Utlis.config_handler import get_config_data, ConfDataType
+from Utlis.config_handler import ConfDataType, get_config_data
 
 
 __PROJECT_ID = get_config_data(ConfDataType.MAIN)['project-id']

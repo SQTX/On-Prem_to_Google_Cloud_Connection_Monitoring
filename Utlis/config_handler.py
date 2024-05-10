@@ -6,9 +6,24 @@ from pathlib import Path
 from enum import Enum
 
 
+# ** PRIVATE *********************************************************************************************************
 __CONFIG_FILE_PATH = Path('./user-config.yaml')
 __PATH_FOR_JSON_FILE = Path('./config.json')
 
+'''
+Function for reading configuration
+Returns:
+    dict: Configuration data read from the file
+'''
+def __read_config():
+    with open(__CONFIG_FILE_PATH, 'r') as stream:
+        return yaml.safe_load(stream)
+
+
+# ** PUBLIC **********************************************************************************************************
+'''
+Configuration sections
+'''
 class ConfDataType(Enum):
     MAIN = 1
     VMDATA = 2
@@ -17,11 +32,13 @@ class ConfDataType(Enum):
     ADMINDATA = 5
 
 
-def __read_config():
-    with open(__CONFIG_FILE_PATH, 'r') as stream:
-        return yaml.safe_load(stream)
-
-
+'''
+# Function returning data from the configuration file
+Arg:
+    config_type (ConfDataType): Selected configuration section
+Return:
+    dict: Configuration data
+'''
 def get_config_data(config_type):
     config = __read_config()
 
@@ -39,6 +56,13 @@ def get_config_data(config_type):
         return -1
 
 
+'''
+Function converting YAML to JSON
+Args:
+    config_yaml (dict): YAML configuration data to be converted
+Returns:
+    dict: Converted JSON configuration data
+'''
 def yaml_2_json(config_yaml):
     with open(__PATH_FOR_JSON_FILE, 'w') as json_file:
         json.dump(config_yaml, json_file)

@@ -1,7 +1,7 @@
 from GoogleAPI.logging_api_handler import Logging
 from GoogleAPI.monitoring_api_handler import Monitoring
 
-from Utlis.config_handler import get_config_data, ConfDataType
+from Utlis.config_handler import ConfDataType, get_config_data
 
 from Supervise.connection_status import ConnectionStatus, ConnectionLevel
 
