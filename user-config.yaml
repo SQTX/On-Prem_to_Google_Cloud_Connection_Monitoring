@@ -33,13 +33,13 @@ addresses:
   # (For IPv4)
   # Provide the IPv4 address of the host (workstation/server)  [e.g., 192.168.10.53]
   #  host-ipv4-address: "X.X.X.X"
-  host-ipv4-address: ""
+  host-ipv4-address: "192.168.0.35"
   # Provide the IPv4 address of the local network router [e.g., 192.168.10.1]
   #  lan-router-ipv4-address: "X.X.X.X"
   lan-router-ipv4-address: "192.168.0.1"
   # Provide the IPv4 address of your ISP [e.g., 130.5.5.25]
   #  isp-ipv4-address: "X.X.X.X"
-  isp-ipv4-address: "127.0.0.1"
+  isp-ipv4-address: "192.42.99.46"
   # Provide the IPv4 address of the chosen DNS server [e.g., GoogleDNS = 8.8.8.8]
   #  dns-ipv4-address: "X.X.X.X"
   dns-ipv4-address: "8.8.8.8"
@@ -50,4 +50,4 @@ addresses:
 project-admin-data:
 # Provide the email address to which information will be sent in case the agent detects connection issues
 #  admin-mail-address: "mail@domain.com"
-  admin-mail-address: "sqtx@yahoo.com"
+  admin-mail-address: "naukowepiwo@gmail.com"

@@ -88,6 +88,9 @@ Temporary Items
 /GoogleAPI/__pycache__
 /Probe/__pycache__
 
+__pycache__
+*.pyc
+
 
 ####################################################################
 # PyCharm

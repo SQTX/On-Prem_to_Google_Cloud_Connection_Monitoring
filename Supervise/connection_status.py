@@ -5,8 +5,9 @@ class ConnectionLevel(Enum):
     USER_VM = 1
     USER_DNS = 2
     USER_ROUTER = 3
-    USER_CONNECTION_FINE_AGAIN = 4
-    USER_ISP = 5
+    USER_ISP = 4
+    USER_CONNECTION_FINE_AGAIN = 5
+
 
 
     def __int__(self): return self.value
