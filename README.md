@@ -60,7 +60,11 @@ On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent
     To do so, open the terminal and execute the following commands:
 
     ```bash
+    pip install os
     pip install numpy
+    pip install smtplib
+    pip install ssl
+    pip install time
     pip install pyyaml
     pip install python-dotenv
     pip install mail
