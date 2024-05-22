@@ -44,12 +44,9 @@ On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent
 4. To enable the agent to function properly, it is necessary to fill in several pieces of information in `user-config.yaml`. With these, the application will be able to both connect to the cloud service and control its operation.
 
 5. Install the necessary Python libraries to enable communication with Google Cloud services:
-
-    - os
     - numpy
     - smtplib
     - ssl
-    - time
     - pyyaml
     - python-dotenv
     - mail
@@ -60,11 +57,9 @@ On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent
     To do so, open the terminal and execute the following commands:
 
     ```bash
-    pip install os
     pip install numpy
     pip install smtplib
     pip install ssl
-    pip install time
     pip install pyyaml
     pip install python-dotenv
     pip install mail
