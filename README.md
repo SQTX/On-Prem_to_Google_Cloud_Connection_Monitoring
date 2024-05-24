@@ -80,13 +80,18 @@ monitor and then resolve any network connectivity issues with Google Cloud resou
 
 ## Terraform
 You can use Terraform to generate a ready-made Google Cloud project/infrastructure. 
-Instructions for use: [Terraform_instruction]()
+Instructions for use: [Terraform_instruction](https://github.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/blob/Documentation-hotfix/doc/Terraform_Installation_and_Configuration.md)
 
 ## Licence Apache License 2.0
 More information you can find here: [Apache_License](https://github.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/blob/main/LICENSE)
 
 ---
 
-[//]: # (<p align="center">)
-[//]: # (  <img src="https://github.com/SQTX/U2F_arduino_key/blob/main/img/btn+rc.png?">)
-[//]: # (</p>)
+<p align="center">
+   <img width="330" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/Google_logo.png">
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <img width="100" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/PWr_logo.png">
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <img width="155" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/KPZ_logo.png">
+
+</p>
