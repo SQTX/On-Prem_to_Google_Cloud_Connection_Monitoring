@@ -3,6 +3,27 @@ import numpy
 from .connection_status import ConnectionStatus
 from Utlis.probing import ping_ip
 
+
+    # """
+    # A class used to supervise network connections by monitoring RTT, packet loss, and jitter.
+
+    # Attributes:
+    #     RTT_RISK_LINE (int): Threshold for RTT to be considered at risk.
+    #     PACKET_LOSS_RISK_LINE (int): Threshold for packet loss to be considered at risk.
+    #     RTT_DANGER_LINE (int): Threshold for RTT to be considered dangerous.
+    #     PACKET_LOSS_DANGER_LINE (int): Threshold for packet loss to be considered dangerous.
+    #     RTT_DEAD_LINE (int): Threshold for RTT to be considered dead.
+    #     PACKET_LOSS_DEAD_LINE (float): Threshold for packet loss to be considered dead.
+    #     MAX_CURRENT_LENGTH (int): Maximum length of the current data window.
+    #     MAX_LONG_LENGTH (int): Maximum length of the long-term data window.
+    #     ip_address (str): IP address to be monitored.
+    #     rtt_current (list): List to store current RTT values.
+    #     packet_loss_current (list): List to store current packet loss values.
+    #     jitter_current (list): List to store current jitter values.
+    #     rtt_long (list): List to store long-term RTT values.
+    #     packet_loss_long (list): List to store long-term packet loss values.
+    #     jitter_long (list): List to store long-term jitter values.
+    # """
 class Supervisor():
 
     RTT_RISK_LINE = 150
@@ -17,6 +38,15 @@ class Supervisor():
     MAX_CURRENT_LENGTH = 3
     MAX_LONG_LENGTH = 15
 
+
+
+        #  """
+        # Initializes the Supervisor class with the given IP address.
+
+        # Args:
+        #     ip_address (str): The IP address to be monitored.
+        # """
+
     def __init__(self, ip_address):
         self.ip_address = ip_address
 
@@ -29,6 +59,12 @@ class Supervisor():
         self.jitter_long =  []
     
 
+    # """
+    # Pings the IP address and inserts the collected data into the current and long-term data windows.
+
+    # Returns:
+    #     dict: A dictionary containing the ping data.
+    # """
     def insert_connection_data(self):
         ping_data = ping_ip(self.ip_address)
 
@@ -57,13 +93,20 @@ class Supervisor():
         return ping_data
 
 
+
+    #     """
+    # Checks if the connection is dead based on the current RTT and packet loss data.
+
+    # Returns:
+    #     ConnectionStatus: The status of the connection.
+    # """
     def check_connection_dead(self):
         if len(self.rtt_current) < 2:
             return ConnectionStatus.CANNOT_ESTABLISH_CONNECTION_DETAILS
         
         avg_packet_loss = numpy.average(self.packet_loss_current)
         avg_rtt = numpy.average(self.rtt_current)
-        print(avg_packet_loss)
+        print(f'# Current average packet-loss: {avg_packet_loss}')
 
         if avg_packet_loss >= self.PACKET_LOSS_DEAD_LINE or (avg_packet_loss == 0 and avg_rtt == 0):
             return ConnectionStatus.CONNECTION_DEAD
@@ -71,6 +114,15 @@ class Supervisor():
         if avg_packet_loss == 0:
             return ConnectionStatus.CONNECTION_CURRENTLY_FINE
     
+
+
+    #     """
+    # Checks the stability of the connection based on current and long-term RTT and packet loss data.
+
+    # Returns:
+    #     tuple or ConnectionStatus: A tuple with the connection status, average packet loss, and average RTT
+    #                                 if the stability can be evaluated, otherwise just the connection status.
+    # """
     def check_connection_stability(self):
         can_eval_current_connection = False
         can_eval_long_connection = False

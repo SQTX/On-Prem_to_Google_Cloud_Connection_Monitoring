@@ -1,6 +1,24 @@
 import requests
 from icmplib import ping
 
+
+#  """
+#     Pings the given IP address and returns the ping statistics.
+
+#     Args:
+#         ip_address (str): The IP address to ping.
+
+#     Returns:
+#         dict: A dictionary containing the ping statistics:
+#             - ip_address (str): The IP address that was pinged.
+#             - min_rtt (float): The minimum round-trip time.
+#             - max_rtt (float): The maximum round-trip time.
+#             - avg_rtt (float): The average round-trip time.
+#             - packet_loss (float): The packet loss percentage.
+#             - jitter (float): The jitter value.
+#             - is_alive (bool): Indicates if the IP address is alive.
+#     """
+
 def ping_ip(ip_address):
     ping_raw = ping(address = ip_address, interval = 0.5, count = 2, timeout=1)
     
@@ -17,6 +35,32 @@ def ping_ip(ip_address):
 
     return data
 
+def print_ping_data(data):
+    print('\n')
+    print('#', '-' * 30, '#')
+    for key, value in data.items():
+        print(f'{key} : {value}')
+        
+    
+    print('#', '-' * 30, '#')
+    print('\n')
+    
+
+    # """
+    # Sends an HTTP GET request to the given IP address and returns the response statistics.
+
+    # Args:
+    #     ip_address (str): The IP address to send the HTTP GET request to.
+
+    # Returns:
+    #     dict: A dictionary containing the response statistics:
+    #         - status_code (int): The HTTP status code of the response.
+    #         - status_response (str): The HTTP status message of the response.
+    #         - delta_time (float): The time taken to receive the response in seconds.
+    #         - response_length (int): The length of the response content.
+    #         - response_headers (dict): The headers of the response.
+    #         - status_response (bool): False if the request failed.
+    # """
 def send_curl(ip_address):
 
     try:
