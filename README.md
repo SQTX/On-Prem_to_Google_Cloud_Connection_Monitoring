@@ -70,8 +70,6 @@ monitor and then resolve any network connectivity issues with Google Cloud resou
 
     ```bash
     pip install numpy
-    pip install smtplib
-    pip install ssl
     pip install pyyaml
     pip install python-dotenv
     pip install mail
