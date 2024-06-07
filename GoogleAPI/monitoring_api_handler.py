@@ -1,7 +1,10 @@
 from google.cloud import monitoring_v3
 import time
+from Utlis.config_handler import ConfDataType, get_config_data
 
-from Data.settings import PROJECT_ID
+
+PROJECT_ID = get_config_data(ConfDataType.MAIN)['project-id']
+
 class Monitoring:
    
     def __init__(self, instance) -> None:

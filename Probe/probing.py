@@ -1,6 +1,7 @@
-
 from GoogleAPI.logging_api_handler import Logging
 from GoogleAPI.monitoring_api_handler import Monitoring
+
+from Utlis.config_handler import ConfDataType, get_config_data
 
 from Supervise.connection_status import ConnectionStatus, ConnectionLevel
 
@@ -9,8 +10,7 @@ from Supervise.supervisor import SupervisingISP
 from Supervise.supervisor import SupervisingGC
 from Supervise.supervisor import SupervisingRouter
 
-
-from Utlis.probing import ping_ip, send_curl
+# from Utlis.probing import ping_ip, send_curl
 
 class Probing():
 
@@ -18,22 +18,16 @@ class Probing():
         self.MonitoringClient = Monitoring(instance)
         self.LoggingClient = Logging()
 
-        # type here your NAT PC IP address
-        self.user_ip_address = ''
-
-        # type here your NAT Router IP adddress
-        self.router_ip_address = '192.168.0.1'
-
-        self.dns_ip_address = '8.8.8.8'
-
-        # currently doesnt work
-        self.isp_ip_address = '127.0.0.1'
+        # self.user_ip_address = get_config_data(ConfDataType.ADDRESS)['host-ipv4-addres']
+        self.router_ip_address = get_config_data(ConfDataType.ADDRESS)['lan-router-ipv4-address']
+        self.isp_ip_address = get_config_data(ConfDataType.ADDRESS)['isp-ipv4-address']
+        self.dns_ip_address = get_config_data(ConfDataType.ADDRESS)['dns-ipv4-address']
 
         self.InspectDNS = SupervisingDNS(self.dns_ip_address)
         self.InspectISP = SupervisingISP(self.isp_ip_address)
         self.InspectGC = SupervisingGC(instance['ip_address'])
 
-        self.InspectRouter = SupervisingRouter(self.user_ip_address)
+        self.InspectRouter = SupervisingRouter(self.router_ip_address)
 
         self.connection_status_log_name = 'connection-status-test-bs-2'
         self.wait_for_proper_connection = False
