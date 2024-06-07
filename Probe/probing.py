@@ -132,7 +132,11 @@ class Probing():
                 try: 
                     send_alert_mail(body = x[0])
                     print('[INFO] Mail sent')
-                except: print('[INFO] Cannot send mail')
+                except Exception as e:
+                    print('-' * 7, '[INFO] Cannot write log mail.', '-' * 7)
+                    print(e)
+                    print('-' * 30)
+                    
                 self.logging({'log_info' : x[0], 'level_failed' : int(x[1]), 'source_ip' : x[2], 'destination_ip' : x[3] }, self.connection_status_log_name)
         
         self.connection_status_queue.clear()
@@ -213,7 +217,6 @@ class Probing():
             can_send_metric = self.monitoring(ping_gc_data['avg_rtt'], metric_name)
           
             if can_send_metric:
-                print('[INFO] Log sent')
                 if self.enable_logging_api: self.logging(ping_gc_data, log_name)
             
         

@@ -20,13 +20,13 @@ monitor and then resolve any network connectivity issues with Google Cloud resou
 2. Google Cloud. On Windows, it is possible to use the Google Cloud CLI Installer, which is the 
 3. easiest way to install Google Cloud SDK.
 
-    1.1 Download and open [Google Cloud CLI Installer](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+    3.1 Download and open [Google Cloud CLI Installer](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
 
-    1.2 After opening, it is required to log in to Google
+    3.2 After opening, it is required to log in to Google
 
-    1.3 Choose the cloud project to use
+    3.3 Choose the cloud project to use
 
-    1.4 Choose the Default Compute Region and Zone. If the desired zone is not listed, type `list`
+    3.4 Choose the Default Compute Region and Zone. If the desired zone is not listed, type `list`
    to list all zones.
 
 2. **Create and configure an access key**:

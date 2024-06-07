@@ -31,5 +31,8 @@ class Logging:
 
         try: logger.log_struct(data)
 
-        except: print('[INFO] Cannot write log structure.')
+        except Exception as e:
+            print('-' * 7, '[INFO] Cannot write log structure.', '-' * 7)
+            print(e)
+            print('-' * 30)
 

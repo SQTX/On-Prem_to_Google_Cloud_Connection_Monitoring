@@ -116,8 +116,10 @@ class Monitoring:
             self.monitoring_client.create_time_series(request={"name": f'projects/{PROJECT_ID}', "time_series": [series]}, timeout = 2)
             return True
 
-        except:
-            print('[INFO] Cannot write metric')
+        except Exception as e:
+            print('-' * 7, '[INFO] Cannot write metric.', '-' * 7)
+            print(e)
+            print('-' * 30)
             return False
 
        
