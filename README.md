@@ -1,15 +1,24 @@
-# On-Prem_to_Google_Cloud_Connection_Monitoring
+# On-Prem to Google Cloud Connection Monitoring
+
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)
 
 
-# WINDOWS
 
 ## About
 
-On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent. Its purpose is to monitor and then resolve any network connectivity issues with Google Cloud resources.
+On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent. Its purpose is to 
+monitor and then resolve any network connectivity issues with Google Cloud resources.
 
 ## Installation
 
-1. **Install Google Cloud SDK**, a set of tools for managing resources and applications hosted on Google Cloud. On Windows, it is possible to use the Google Cloud CLI Installer, which is the easiest way to install Google Cloud SDK.
+### Windows
+
+1. **Install Google Cloud SDK**, a set of tools for managing resources and applications hosted on 
+2. Google Cloud. On Windows, it is possible to use the Google Cloud CLI Installer, which is the 
+3. easiest way to install Google Cloud SDK.
 
     1.1 Download and open [Google Cloud CLI Installer](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
 
@@ -17,7 +26,8 @@ On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent
 
     1.3 Choose the cloud project to use
 
-    1.4 Choose the Default Compute Region and Zone. If the desired zone is not listed, type `list` to list all zones.
+    1.4 Choose the Default Compute Region and Zone. If the desired zone is not listed, type `list`
+   to list all zones.
 
 2. **Create and configure an access key**:
 
@@ -67,4 +77,21 @@ On-prem to Google Cloud Connection Monitoring is an open-source monitoring agent
     pip install google-cloud-monitoring
     pip install google-cloud-logging
     ```
-```
+
+## Terraform
+You can use Terraform to generate a ready-made Google Cloud project/infrastructure. 
+Instructions for use: [Terraform_instruction](https://github.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/blob/Documentation-hotfix/doc/Terraform_Installation_and_Configuration.md)
+
+## Licence Apache License 2.0
+More information you can find here: [Apache_License](https://github.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/blob/main/LICENSE)
+
+---
+
+<p align="center">
+   <img width="330" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/Google_logo.png">
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <img width="100" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/PWr_logo.png">
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <img width="155" src="https://raw.githubusercontent.com/SQTX/On-Prem_to_Google_Cloud_Connection_Monitoring/Documentation-hotfix/doc/img/KPZ_logo.png">
+
+</p>

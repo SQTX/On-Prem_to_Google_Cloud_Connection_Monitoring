@@ -12,8 +12,10 @@ from Supervise.supervisor import SupervisingGC
 from Supervise.supervisor import SupervisingRouter
 
 from Alert.mail_alert_sys import send_alert_mail
+import os
 
-
+credential_path="Key//key.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
 # from Utlis.probing import ping_ip, send_curl
 
 
